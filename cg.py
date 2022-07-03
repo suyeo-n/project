@@ -11,7 +11,6 @@ for line in open('rosalind_gc.txt', 'r'):
   if line[0] == '>':
     if len(seq) > 0:
       seqs[seqid] = seq
-      '''seqs[seqid] = GC(seq)'''
       
     seqid = line.rstrip()[1:]
     seq = ''
@@ -20,7 +19,6 @@ for line in open('rosalind_gc.txt', 'r'):
 
 if len(seq) > 0:
     seqs[seqid] = seq
-    '''seqs[seqid] = GC(seq)'''
 print(seqs)
 maxid = max(seqs, key=seqs.get)
 
